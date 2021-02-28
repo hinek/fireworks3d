@@ -1,0 +1,17 @@
+[gd_scene load_steps=3 format=2]
+
+[ext_resource path="res://rocket_mesh.tres" type="QuadMesh" id=1]
+[ext_resource path="res://Rocket.gd" type="Script" id=2]
+
+[node name="Rocket" type="RigidBody"]
+script = ExtResource( 2 )
+
+[node name="CPUParticles" type="CPUParticles" parent="."]
+amount = 20
+lifetime = 0.1
+local_coords = false
+mesh = ExtResource( 1 )
+direction = Vector3( 0, -1, 0 )
+spread = 10.0
+initial_velocity = 5.0
+scale_amount_random = 0.5

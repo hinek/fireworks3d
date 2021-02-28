@@ -1,0 +1,23 @@
+[gd_scene load_steps=4 format=2]
+
+[ext_resource path="res://explosion_mesh.tres" type="QuadMesh" id=1]
+[ext_resource path="res://explosion5_gradient.tres" type="Gradient" id=2]
+[ext_resource path="res://Explosion.gd" type="Script" id=3]
+
+[node name="Explosion" type="Spatial"]
+script = ExtResource( 3 )
+
+[node name="Particles" type="CPUParticles" parent="."]
+amount = 500
+lifetime = 2.0
+explosiveness = 0.95
+mesh = ExtResource( 1 )
+direction = Vector3( 0, 0, 0 )
+spread = 180.0
+initial_velocity = 15.0
+initial_velocity_random = 1.0
+damping = 5.0
+scale_amount_random = 0.5
+color_ramp = ExtResource( 2 )
+hue_variation = 0.1
+hue_variation_random = 1.0
